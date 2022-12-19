@@ -1,5 +1,12 @@
 <?php
 use Illuminate\Support\Facades\Route;
-Route::post('/test/result', [App\Http\Controllers\TestController::class, 'result']);
-Route::match(['get','post'],'/test/form/', [App\Http\Controllers\TestController::class, 'form']);
 
+
+
+
+Auth::routes();
+
+Route::get('/catalog', [App\Http\Controllers\CatalogController::class, 'catalog']);
+Route::get('/info', [App\Http\Controllers\InfoController::class, 'info']);
+Route::get('/map', [App\Http\Controllers\MapController::class, 'map']);
+?>
